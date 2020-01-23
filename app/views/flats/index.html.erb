@@ -1,0 +1,18 @@
+<h1>All flats (<%= @flats.size %>)</h1>
+<div class="row">
+  <% @flats.each do |flat| %>
+    <div class="card p-3 col-4" style="width: 18rem;">
+      <img class="card-img-top" src="https://srilavan007.files.wordpress.com/2017/04/hosue.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= flat.address %></p>
+        <p class="card-text">Price: <%= flat.price_per_night %>$ | Max Guests: <%= flat.number_of_guests %></p>
+        <%= link_to "More info", "#", class: "btn btn-primary" %>
+        <%= link_to "Edit", "#", class: "btn btn-warning" %>
+        <%= link_to "Delete", flat_path(flat.id), class: "btn btn-danger", method: :delete,
+      data: { confirm: "Are you sure?" } %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
