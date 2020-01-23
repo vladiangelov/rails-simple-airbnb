@@ -8,7 +8,7 @@
         <p class="card-text"><%= flat.address %></p>
         <p class="card-text">Price: <%= flat.price_per_night %>$ | Max Guests: <%= flat.number_of_guests %></p>
         <%= link_to "More info", "#", class: "btn btn-primary" %>
-        <%= link_to "Edit", "#", class: "btn btn-warning" %>
+        <%= link_to "Edit", edit_flat_path(flat.id), class: "btn btn-warning" %>
         <%= link_to "Delete", flat_path(flat.id), class: "btn btn-danger", method: :delete,
       data: { confirm: "Are you sure?" } %>
       </div>

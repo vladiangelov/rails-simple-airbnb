@@ -1,0 +1,10 @@
+<h1>Edit a flat</h1>
+<%= simple_form_for @flat do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <%= f.input :price_per_night %>
+  <%= f.input :number_of_guests %>
+  <%= f.submit "Edit a Flat", class: "btn btn-primary" %>
+  <%= link_to "Return to listings", flats_path, class:"btn btn-danger" %>
+<% end %>
